@@ -52,15 +52,18 @@
         <h1> Relaxe.ao </h1>
       </a>
     </div>
-    <nav>
+    <button class="hamburger" id="hamburger-btn">
+  <i class="fa fa-bars"></i>
+</button>
+    <nav id="nav-menu" class="nav-links" >
       <ul>
         <li style="font-weight: bold;"><a href="" class="a-nav" style="color: orangered; text-decoration: underline;">
             Home | </a></li>
         <li style="font-weight: bold;"><a class="a-nav" href="">Sobre |</a></li>
         <li style="font-weight: bold;"><a class="a-nav" href="">Serviços |</a></li>
         <li style="font-weight: bold;"><a class="a-nav" href="">Detalhes |</a></li>
-        <li style="font-weight: bold;"><a class="a-nav" href="#contact">Contactos</a></li>
-
+        <li style="font-weight: bold;"><a class="a-nav" href="#contact">Contactos |</a></li>
+        <li style="font-weight: bold;"><a href="" class="a-nav"> Login </a></li>
       </ul>
     </nav>
   </header>
@@ -85,8 +88,6 @@
         </div>
       </div>
     </div>
-    <button class="car" id="prev">Prev</button>
-    <button class="car" id="next">Next</button>
   </div>
   <h1> Mega promoção </h1>
   <span>| Factura</span>
@@ -367,6 +368,14 @@ setInterval(() => {
       closeModal();
     }
   }
+  // Menu hambúrguer toggle
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navMenu = document.getElementById('nav-menu');
+
+hamburgerBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
+
 </script>
 </body>
 
